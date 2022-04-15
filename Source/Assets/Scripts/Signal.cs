@@ -5,7 +5,6 @@ using UnityEngine;
 public class Signal : MonoBehaviour
 {
     public SignalColor Type;
-    Color color;
 
     Rigidbody2D rb;
     Vector2 moveDirection;
@@ -17,7 +16,8 @@ public class Signal : MonoBehaviour
     public void Init(SignalColor newType,Vector3 direction)
     {
         Type=newType;
-        color=GameManager.Instance.SignalColorGenerator(Type);
+        GetComponent<SpriteRenderer>().color=GameManager.Instance.SignalColorGenerator(Type);
+
         moveDirection=direction;
     }
     void FixedUpdate()

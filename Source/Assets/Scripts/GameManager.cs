@@ -12,7 +12,7 @@ public class GameManager
             return instance;
         }
     }
-    public Color Red,Cyan,Lime,Purple,Yellow;
+    public Color Red=Color.red,Cyan=Color.blue,Lime=Color.green,Purple=Color.magenta,Yellow=Color.yellow;
 
     GameObject signalPrefab;
 

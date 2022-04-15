@@ -9,32 +9,14 @@ public class Pin : MonoBehaviour
         public bool terminal=false;
         LineRenderer linerenderer;
     /* 
-       
         Sprite signal1display;
         Sprite signal2display;
-
      */
      void Start()
      {
          currentlane=lane1;
      }
-    void Update()
-    {
-
-        if(!Input.anyKey)
-            return;
-
-        float horizontal=0;
-
-        if(Input.GetKeyDown(KeyCode.LeftArrow)){ horizontal=-1;}
-        else if(Input.GetKeyDown(KeyCode.RightArrow)){horizontal=1;}
-        
-        Rotate(horizontal);
-    }
-
-
-
-    void Rotate(float direction)
+    public void Rotate(float direction)
     {
         if(direction==-1)
         {
@@ -56,7 +38,10 @@ public class Pin : MonoBehaviour
     {
         
         if(terminal)
+        {
         Destroy(other.gameObject);
+        return;
+        }
         if(other.gameObject.GetComponent<Signal>())
         {
             RedirectSignal(other.gameObject.GetComponent<Signal>());

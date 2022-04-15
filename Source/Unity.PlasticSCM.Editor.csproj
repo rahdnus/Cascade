@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5d781752-a2b1-f15e-d1b4-3e75e279d23f}</ProjectGuid>
+    <ProjectGuid>{930b38da-c293-086b-873b-d05e533be126}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.PlasticSCM.Editor</AssemblyName>
@@ -574,13 +574,13 @@
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -933,19 +933,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{ef552b35-4501-4085-cde1-10158191ca00}</Project>
+      <Project>{720aa6c2-2680-95c7-0c11-d6a862b8c095}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{d348593a-8bab-dfc6-9cc7-d1aab454663c}</Project>
+      <Project>{c36a2558-1430-c0a1-f5d5-1b398c86dfef}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{cf06af4c-26af-68bc-2466-f1a5b499d213}</Project>
+      <Project>{39da6a7c-57db-2f8c-c5ad-02751efecd78}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{ddc2b505-e499-8a3b-1c95-2a0c7ea5178a}</Project>
+      <Project>{d75c3985-3db3-fffb-0d5a-f77dfd68f849}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

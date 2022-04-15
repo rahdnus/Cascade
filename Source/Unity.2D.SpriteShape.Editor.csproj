@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{210fc961-72aa-8ab3-f819-6570e809b354}</ProjectGuid>
+    <ProjectGuid>{3ae7cb7a-b382-1e85-633d-cbb9a83c1a6c}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.SpriteShape.Editor</AssemblyName>
@@ -289,22 +289,22 @@
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.collab-proxy@1.15.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -657,39 +657,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{0e5b019e-df25-341e-29c2-0852dcb83b5c}</Project>
+      <Project>{450fdb8c-7eb9-7b04-5376-e32181ccee40}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{b1775513-1a83-70ea-9b6b-7b128182d732}</Project>
+      <Project>{79bee3ae-e4b2-3cae-183a-112345f0920a}</Project>
       <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{d3bedcf4-58f9-7ecb-6131-03df5f0ce0c5}</Project>
+      <Project>{b56f8eef-aa96-a61b-7062-1b7f8718727b}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
-      <Project>{2c86db24-2613-33fd-8925-9e2d456518eb}</Project>
+      <Project>{c82bb11b-829f-3bf2-6bb5-4643bb6fc708}</Project>
       <Name>Unity.2D.SpriteShape.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Path.Editor.csproj">
-      <Project>{b1e73001-3d4a-8adc-c2b8-24577bbbd73f}</Project>
+      <Project>{c2067762-21ac-5232-96f3-f88cfc935882}</Project>
       <Name>Unity.2D.Path.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{ef552b35-4501-4085-cde1-10158191ca00}</Project>
+      <Project>{720aa6c2-2680-95c7-0c11-d6a862b8c095}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{d348593a-8bab-dfc6-9cc7-d1aab454663c}</Project>
+      <Project>{c36a2558-1430-c0a1-f5d5-1b398c86dfef}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{cf06af4c-26af-68bc-2466-f1a5b499d213}</Project>
+      <Project>{39da6a7c-57db-2f8c-c5ad-02751efecd78}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{ddc2b505-e499-8a3b-1c95-2a0c7ea5178a}</Project>
+      <Project>{d75c3985-3db3-fffb-0d5a-f77dfd68f849}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

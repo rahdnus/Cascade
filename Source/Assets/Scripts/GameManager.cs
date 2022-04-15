@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public static GameManager instance;
+    public static GameManager Instance{
+        get{
+            if(instance==null)
+                instance=new GameManager();
+            return instance;
+        }
     }
+    public Color Red,Cyan,Lime,Purple,Yellow;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   public Color SignalColorGenerator(SignalColor color)
+   {
+       switch (color)
+       {
+           case SignalColor.Red:return Red;
+           case SignalColor.Cyan:return Cyan;
+           case SignalColor.Lime:return Lime;
+           case SignalColor.Purple:return Purple;
+           case SignalColor.Yellow:return Yellow;
+
+           default:
+            Debug.LogError("No such Color"+color.ToString());
+            return Color.grey;
+       }
+   }
 }

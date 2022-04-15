@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour
 {       
-        Transform currentemitterpoint,nextdestinationPoint;
+        Lane currentlane;
         [SerializeField]Lane lane1,lane2;
+        public bool terminal=false;
+        LineRenderer linerenderer;
     /* 
        
         Sprite signal1display;
         Sprite signal2display;
 
      */
-    void Start()
-    {
-
-    }
+     void Start()
+     {
+         currentlane=lane1;
+     }
     void Update()
     {
 
@@ -29,21 +31,39 @@ public class Pin : MonoBehaviour
         
         Rotate(horizontal);
     }
+
+
+
     void Rotate(float direction)
     {
         if(direction==-1)
         {
-            currentemitterpoint=lane1.emitter;
+            currentlane=lane1;
         }
         else if(direction==1)
         {
-            currentemitterpoint=lane2.emitter;
+            currentlane=lane2;
         }
     }
-    void spawnNewSignal(Signal signal)
+    void RedirectSignal(Signal signal)
     {
-
+        Vector3 direction=(currentlane.nextreciever.position-currentlane.emitter.position).normalized;
+        signal.gameObject.transform.position=currentlane.emitter.position;
+        signal.Init(signal.Type,direction);
     }   
+    
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        
+        if(terminal)
+        Destroy(other.gameObject);
+        if(other.gameObject.GetComponent<Signal>())
+        {
+            RedirectSignal(other.gameObject.GetComponent<Signal>());
+            // Destroy(other.gameObject);
+        }
+
+    }
 
 }
 [System.Serializable]

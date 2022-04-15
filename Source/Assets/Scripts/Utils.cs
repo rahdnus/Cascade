@@ -12,15 +12,15 @@ public class Utils
             return instance;
         }
     } 
-   public SignalColor indextoSignalType(int index)
+    public SignalColor indextoSignalType(int index)
     {
         switch(index)
         {
-            case 1:return SignalColor.Cyan;
-            case 2:return SignalColor.Lime;
-            case 3:return SignalColor.Purple;
-            case 4:return SignalColor.Red;
-            case 5:return SignalColor.Yellow;
+            case 0:return SignalColor.Cyan;
+            case 1:return SignalColor.Lime;
+            case 2:return SignalColor.Purple;
+            case 3:return SignalColor.Red;
+            case 4:return SignalColor.Yellow;
 
             default:
                 Debug.LogError("Invalid index :"+index.ToString());

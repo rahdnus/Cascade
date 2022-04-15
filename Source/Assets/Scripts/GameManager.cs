@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager 
 {
-    public static GameManager instance;
+    private static GameManager instance;
     public static GameManager Instance{
         get{
             if(instance==null)
@@ -14,6 +14,13 @@ public class GameManager : MonoBehaviour
     }
     public Color Red,Cyan,Lime,Purple,Yellow;
 
+    GameObject signalPrefab;
+
+    public GameManager()
+    {
+        signalPrefab=Resources.Load("Prefabs/FirstPass/Signal") as GameObject;
+
+    }
    public Color SignalColorGenerator(SignalColor color)
    {
        switch (color)

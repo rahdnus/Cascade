@@ -29,6 +29,7 @@ public class Controller : MonoBehaviour
         {
             currentPin=pins[2];
         }
+        
         float horizontal=0;
 
         if(Input.GetKeyDown(KeyCode.LeftArrow)){ horizontal=-1;}

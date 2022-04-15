@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
+    [SerializeField] SignalColor[] colors;
     [SerializeField] Lane lane;
     [SerializeField] GameObject signalPrefab;
 
@@ -21,10 +22,10 @@ public class Spawner : MonoBehaviour
     }
     public void Spawn(Vector3 position,Lane lane)
     {
-        int typeindex=Random.Range(0,5);
+        int typeindex=Random.Range(0,colors.Length);
         GameObject signal=Instantiate(signalPrefab,position,Quaternion.identity);
         
-        SignalColor color=Utils.Instance.indextoSignalType(typeindex);
+        SignalColor color=colors[typeindex];
         Vector3 direction=(lane.nextreciever.position-lane.emitter.position).normalized;
 
         signal.GetComponent<Signal>().Init(color,direction);

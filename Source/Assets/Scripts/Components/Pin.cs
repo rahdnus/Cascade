@@ -24,7 +24,7 @@ public class Pin : Node
             lane=lane2;
         }
     }
-    void Validate(Signal signal)
+    bool Validate(Signal signal)
     {
         bool valid = false;
         foreach (SignalColor color in validateColors)
@@ -35,24 +35,28 @@ public class Pin : Node
                 break;
             }
         }
-        if (valid == false)
-        {
-
-        }
+        return valid;
     }
     void OnCollisionEnter2D(Collision2D other)
     {
+        if(!other.gameObject.GetComponent<Signal>())
+            return;
+     
         if(terminal)
         {
         Destroy(other.gameObject);
         return;
         }
 
-        if(other.gameObject.GetComponent<Signal>())
+        Signal signal=other.gameObject.GetComponent<Signal>();
+        if (Validate(signal))
         {
-            RedirectSignal(other.gameObject.GetComponent<Signal>());
+            RedirectSignal(signal);
+            return;
         }
-
+        Destroy(other.gameObject);
+        //Deduct points
+        Debug.Log("invalid");
     }
 
 }

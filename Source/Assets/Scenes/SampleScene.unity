@@ -880,6 +880,10 @@ PrefabInstance:
       value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 4729397522325249470, guid: c3f97a17ec927e441ae9369e32608768, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e4c3f6549be4f424ca9f6bf8c139567b, type: 2}
+    - target: {fileID: 4729397522325249470, guid: c3f97a17ec927e441ae9369e32608768, type: 3}
       propertyPath: lane.emitter
       value: 
       objectReference: {fileID: 2657865096170845816}

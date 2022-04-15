@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\Components\Spawner.cs" />
      <Compile Include="Assets\Scripts\Components\Node.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\MIDIScripts\SongItem.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

@@ -138,6 +138,18 @@ PrefabInstance:
       propertyPath: terminal
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1865119029639513517, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
+      propertyPath: validateColors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865119029639513517, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
+      propertyPath: validateColors.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865119029639513517, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
+      propertyPath: validateColors.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1865119029639513518, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -841,6 +853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Modifier
       objectReference: {fileID: 0}
+    - target: {fileID: 3768770165325640028, guid: 2a7748b162d6a5f43aadb188e882b580, type: 3}
+      propertyPath: pin
+      value: 
+      objectReference: {fileID: 1138484344}
     - target: {fileID: 3768770165325640028, guid: 2a7748b162d6a5f43aadb188e882b580, type: 3}
       propertyPath: lane.emitter
       value: 

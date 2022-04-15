@@ -6,7 +6,8 @@ public class Pin : Node
 {       
 
     Lane currenlane;
-        [SerializeField]Lane lane1,lane2;
+    public SignalColor[] validateColors;
+    [SerializeField]Lane lane1,lane2;
         public bool terminal=false;
      void Start()
      {
@@ -21,6 +22,22 @@ public class Pin : Node
         else if(direction==1)
         {
             lane=lane2;
+        }
+    }
+    void Validate(Signal signal)
+    {
+        bool valid = false;
+        foreach (SignalColor color in validateColors)
+        {
+            if (signal.Type == color)
+            {
+                valid = true;
+                break;
+            }
+        }
+        if (valid == false)
+        {
+
         }
     }
     void OnCollisionEnter2D(Collision2D other)

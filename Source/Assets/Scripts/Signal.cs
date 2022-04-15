@@ -24,9 +24,16 @@ public class Signal : MonoBehaviour
     {        
         rb.velocity=moveDirection*moveSpeed;
         // rb.MovePosition((transform.position+new Vector3(moveDirection.x,moveDirection.y,0))*moveSpeed);
-
     }
-
+    public void ChangeSignal(SignalColor signaltype)
+    {
+        Type=signaltype;
+        ChangeColor(GameManager.Instance.SignalColorGenerator(Type));
+    }
+    void ChangeColor(Color color)
+    {
+        GetComponent<SpriteRenderer>().color=color;
+    }
 }
     public enum SignalColor
     {

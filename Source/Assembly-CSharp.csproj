@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\Signal.cs" />
      <Compile Include="Assets\Scripts\Components\SignalModifier.cs" />
      <Compile Include="Assets\Scripts\Components\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Utils.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

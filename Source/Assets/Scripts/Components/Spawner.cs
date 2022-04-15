@@ -6,15 +6,14 @@ public class Spawner : MonoBehaviour
 {
 
     [SerializeField] Transform defaultPos;
-
-    public void Spawn(Vector3 position)
+    [SerializeField] GameObject signalPrefab;
+    public void Spawn(Vector3 position,Lane lane)
     {
+        int typeindex=Random.Range(0,5);
+        GameObject signal=Instantiate(signalPrefab,position,Quaternion.identity);
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SignalColor color=Utils.Instance.indextoSignalType(typeindex);
+        Vector3 direction=(lane.nextreciever.position-lane.emitter.position).normalized;
+        signal.GetComponent<Signal>().Init(color,direction);
     }
 }

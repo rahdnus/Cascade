@@ -6,17 +6,20 @@ public class Signal : MonoBehaviour
 {
     SignalColor Type;
     Color color;
-    // Start is called before the first frame update
-    void Start()
+
+    Vector3 moveDirection;
+    public void Init(SignalColor newType,Vector3 direction)
     {
+        Type=newType;
         color=GameManager.Instance.SignalColorGenerator(Type);
+        
     }
     void Update()
     {
-        //move in a path
+        
     }
 }
     public enum SignalColor
     {
-        Red,Lime,Cyan,Purple,Yellow
+        Undefined,Red,Lime,Cyan,Purple,Yellow
     }

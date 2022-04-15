@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour
 {       
-        Transform currentemitterpoint;
-        Transform Emitterpoint1,Emitterpoint2;
-        
+        Transform currentemitterpoint,nextdestinationPoint;
+        [SerializeField]Lane lane1,lane2;
     /* 
        
         Sprite signal1display;
@@ -29,25 +28,16 @@ public class Pin : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.RightArrow)){horizontal=1;}
         
         Rotate(horizontal);
-
-        /*
-        
-         Rotate() 
-         */
     }
-    /*
-    spawnnewSignal(Signal Reference)
-
-    */
     void Rotate(float direction)
     {
         if(direction==-1)
         {
-            currentemitterpoint=Emitterpoint1;
+            currentemitterpoint=lane1.emitter;
         }
         else if(direction==1)
         {
-            currentemitterpoint=Emitterpoint2;
+            currentemitterpoint=lane2.emitter;
         }
     }
     void spawnNewSignal(Signal signal)
@@ -55,4 +45,10 @@ public class Pin : MonoBehaviour
 
     }   
 
+}
+[System.Serializable]
+public class Lane
+{
+    public Transform emitter;
+    public Transform nextreciever;
 }

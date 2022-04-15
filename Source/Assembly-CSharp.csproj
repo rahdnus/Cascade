@@ -44,6 +44,7 @@
      <Compile Include="Assets\Scripts\Components\Pin.cs" />
      <Compile Include="Assets\Scripts\Components\Spawner.cs" />
      <Compile Include="Assets\Scripts\Components\Node.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

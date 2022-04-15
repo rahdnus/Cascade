@@ -6,9 +6,11 @@ public class Pin : Node
 {       
 
     Lane currenlane;
+
+    public System.Action hit;
     public SignalColor[] validateColors;
     [SerializeField]Lane lane1,lane2;
-        public bool terminal=false;
+    public bool terminal=false;
      void Start()
      {
          lane=lane1;
@@ -55,7 +57,7 @@ public class Pin : Node
             return;
         }
         Destroy(other.gameObject);
-        //Deduct points
+        hit();
         Debug.Log("invalid");
     }
 

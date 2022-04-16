@@ -9,9 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] SignalColor[] colors;
     [SerializeField] Lane lane;
     [SerializeField] GameObject signalPrefab;
-
     [SerializeField] float spawndelay=0.5f;
-    // TEMP
     int counter=0;
     float timer=0f;
     void Start()
@@ -20,12 +18,15 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-        timer+=Time.deltaTime;
-        if(timer>spawndelay)
+        if (!GameManager.Instance.isPaused)
         {
-            Spawn(item.signals[counter],lane.emitter.position,lane);
-            timer=0;
-            counter+=1;
+            timer += Time.deltaTime;
+            if (timer > spawndelay)
+            {
+                Spawn(item.signals[counter], lane.emitter.position, lane);
+                timer = 0;
+                counter += 1;
+            }
         }
     }
     public void Spawn(SignalColor color,Vector3 position,Lane lane)

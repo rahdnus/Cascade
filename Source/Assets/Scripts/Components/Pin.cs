@@ -4,10 +4,10 @@ using UnityEngine;
 public class Pin : Node
 {       
 
-    Lane currenlane;
+    public Lane currentlane;
 
-    public System.Action hit;
-    public SignalColor[] validateColors;
+    public System.Action onhit;
+    public System.Action<int> onscore; 
     [SerializeField]Lane lane1,lane2;
     public bool terminal=false;
      void Start()
@@ -28,7 +28,7 @@ public class Pin : Node
     bool Validate(Signal signal)
     {
         bool valid = false;
-        foreach (SignalColor color in validateColors)
+        foreach (SignalColor color in currentlane.validateColors)
         {
             if (signal.Type == color)
             {
@@ -53,10 +53,11 @@ public class Pin : Node
         if (Validate(signal))
         {
             RedirectSignal(signal);
+            onscore(50);
             return;
         }
         Destroy(other.gameObject);
-        hit();
+        onhit();
         Debug.Log("invalid");
     }
 
@@ -66,4 +67,7 @@ public class Lane
 {
     public Transform emitter;
     public Transform nextreciever;
+
+    public SignalColor[] validateColors;
+
 }

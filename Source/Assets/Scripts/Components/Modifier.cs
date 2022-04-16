@@ -5,12 +5,12 @@ using UnityEngine;
 public class Modifier : Node
 {  
   [SerializeField] Pin pin;
-  SignalColor[] switchcolors;
+  [SerializeField]SignalColor[] switchcolors;
   SignalColor mycolor;
   SpriteRenderer myrenderer;
   void Start()
   {
-    switchcolors=pin.validateColors;
+    // switchcolors=pin.currentlane.validateColors;
     int index=Random.Range(0,switchcolors.Length);
     mycolor=switchcolors[index];
     myrenderer=GetComponent<SpriteRenderer>();

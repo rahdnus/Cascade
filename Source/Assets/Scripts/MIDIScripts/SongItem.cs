@@ -6,13 +6,14 @@ using Melanchall.DryWetMidi.MusicTheory;
 [CreateAssetMenu(fileName="songItem",menuName="SO/songItem")]
 public class SongItem : ScriptableObject
 {
+    [SerializeField] string midiPath;
     public SignalColor[] signals;
     public AudioClip clip;
-    [SerializeField] string midiPath;
     int counter=0;
-public void ReadMIDIsong()
-  {
-     MidiFile midiFile=MidiFile.Read(Application.streamingAssetsPath+"/"+midiPath);
+    public void ReadMIDIsong()
+    {
+    
+    MidiFile midiFile=MidiFile.Read(Application.streamingAssetsPath+"/"+midiPath);
     var notes=midiFile.GetNotes();
     var array=new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
     notes.CopyTo(array,0);
@@ -40,7 +41,10 @@ public void ReadMIDIsong()
                 case NoteName.E:
                     signals[counter] = SignalColor.Yellow;
                     break;
-
+                default:
+                    Debug.LogError("Invalid Read:"+note.NoteName);
+                    signals[counter]=SignalColor.Undefined;
+                break;
             }
         counter+=1;
     }

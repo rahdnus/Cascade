@@ -9,9 +9,12 @@ public class Signal : MonoBehaviour
     Rigidbody2D rb;
     Vector2 moveDirection;
     [SerializeField] float moveSpeed=1;
+    float currentSpeed;
     void Awake()
     {
         rb=GetComponent<Rigidbody2D>();
+        currentSpeed=moveSpeed;
+
     }
     public void Init(SignalColor newType,Vector3 direction)
     {
@@ -20,9 +23,21 @@ public class Signal : MonoBehaviour
 
         moveDirection=direction;
     }
+    void Update()
+    {
+        if(GameManager.Instance.isPaused)
+        {
+            currentSpeed=0;
+        }
+        else
+        {
+            currentSpeed=moveSpeed;
+        }
+    }
     void FixedUpdate()
     {        
-        rb.velocity=moveDirection*moveSpeed;
+            rb.velocity=moveDirection*currentSpeed;
+
         // rb.MovePosition((transform.position+new Vector3(moveDirection.x,moveDirection.y,0))*moveSpeed);
     }
     public void ChangeSignal(SignalColor signaltype)

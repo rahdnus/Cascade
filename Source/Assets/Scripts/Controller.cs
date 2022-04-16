@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Controller : MonoBehaviour
 {
     [SerializeField] Pin[] pins;
@@ -12,6 +11,9 @@ public class Controller : MonoBehaviour
     }
     void Update()
     {
+        if(!GameManager.Instance.isPaused)
+            return;
+        
         if(!Input.anyKey)
             return;
         
@@ -38,3 +40,4 @@ public class Controller : MonoBehaviour
         currentPin.Rotate(horizontal);
     }
 }
+

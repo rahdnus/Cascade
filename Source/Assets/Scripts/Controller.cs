@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
     }
     void Update()
     {
-        if(!GameManager.Instance.isPaused)
+        if(GameManager.Instance.isPaused)
             return;
         
         if(!Input.anyKey)

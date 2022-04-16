@@ -5,7 +5,6 @@ using UnityEngine;
 public class Signal : MonoBehaviour
 {
     public SignalColor Type;
-
     Rigidbody2D rb;
     Vector2 moveDirection;
     [SerializeField] float moveSpeed=1;

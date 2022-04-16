@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43cb3b111012b3c408fb7d96d98b93f5, type: 3}
   m_Name: songItem
   m_EditorClassIdentifier: 
-  signals: 
-  clip: {fileID: 0}
   midiPath: Bass.mid
+  signals: 
+  clip: {fileID: 8300000, guid: 36aaebdaf7d2cef41b75061ec948d81c, type: 3}

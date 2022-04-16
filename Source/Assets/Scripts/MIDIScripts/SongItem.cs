@@ -22,7 +22,6 @@ public class SongItem : ScriptableObject
     Debug.Log(signals.GetLength(0));
     foreach(Melanchall.DryWetMidi.Interaction.Note note in array)
     {
-        Debug.Log(note.NoteName);
 
         switch(note.NoteName)
         {
@@ -42,7 +41,7 @@ public class SongItem : ScriptableObject
                     signals[counter] = SignalColor.Yellow;
                     break;
                 default:
-                    Debug.LogError("Invalid Read:"+note.NoteName);
+                    // Debug.LogError("Invalid Read:"+note.NoteName);
                     signals[counter]=SignalColor.Undefined;
                 break;
             }

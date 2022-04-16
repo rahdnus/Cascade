@@ -6,15 +6,23 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
-    [SerializeField]Text ScoreUI;
+    [SerializeField]AudioSource audioSource;        
+    [SerializeField]Text ScoreUI,totalScoreDeath,totalScoreSuccess;
     public int nextSceneBuildIndex;
     [SerializeField]GameObject DeathScreen,PauseScreen,SuccessScreen,onScreen;
     public int score=0;
     public int lives=4;
     Pin[] pins;
-
+    Spawner spawner;
+    float clipLength,timer;
     void Awake()
     {
+
+        spawner=GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
+        Debug.Log(spawner.item.clip.name);
+        audioSource.clip=spawner.item.clip;
+        clipLength=audioSource.clip.length;
+        audioSource.Play();
         pins=Resources.FindObjectsOfTypeAll(typeof(Pin)) as Pin[];
         foreach(Pin pin in pins)
         {
@@ -24,6 +32,17 @@ public class LevelManager : MonoBehaviour
         PauseScreen.SetActive(false);
         DeathScreen.SetActive(false);
         SuccessScreen.SetActive(false);
+    }
+    public void Update()
+    {
+        if(GameManager.Instance.isPaused)
+        return;
+
+        timer+=Time.deltaTime;
+        if(timer>clipLength)
+        {
+            displaySuccess();
+        }
     }
     public void addScore(int points)
     {
@@ -43,7 +62,7 @@ public class LevelManager : MonoBehaviour
         if(lives==0)
         {
             Debug.Log("Die");
-            displayFailure();
+            displayDeath();
         }
         
     }
@@ -58,13 +77,15 @@ public class LevelManager : MonoBehaviour
         SuccessScreen.SetActive(true);
         onScreen.SetActive(false);
         GameManager.Instance.isPaused=true;
+        totalScoreSuccess.text=score.ToString("00000000");
         //Display Score as well
     }
-    public void displayFailure()
+    public void displayDeath()
     {
         DeathScreen.SetActive(true);
         onScreen.SetActive(false);
         GameManager.Instance.isPaused=true;
+        totalScoreDeath.text=score.ToString("00000000");
         //Display Score as well
         
     }

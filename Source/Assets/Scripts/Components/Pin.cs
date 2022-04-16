@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Pin : Node
 {       
-
-    public Lane currentlane;
-
     public System.Action onhit;
     public System.Action<int> onscore; 
     [SerializeField]Lane lane1,lane2;
     public bool terminal=false;
-     void Start()
+     void Awake()
      {
          lane=lane1;
      }
@@ -28,7 +25,7 @@ public class Pin : Node
     bool Validate(Signal signal)
     {
         bool valid = false;
-        foreach (SignalColor color in currentlane.validateColors)
+        foreach (SignalColor color in lane.validateColors)
         {
             if (signal.Type == color)
             {

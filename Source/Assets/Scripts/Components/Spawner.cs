@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    [SerializeField] SongItem item;
+    public SongItem item;
     [SerializeField] SignalColor[] colors;
     [SerializeField] Lane lane;
     [SerializeField] GameObject signalPrefab;

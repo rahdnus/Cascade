@@ -11,9 +11,12 @@ public class Modifier : Node
   void Start()
   {
     // switchcolors=pin.currentlane.validateColors;
+    
     int index=Random.Range(0,switchcolors.Length);
     mycolor=switchcolors[index];
     myrenderer.color=GameManager.Instance.SignalColorGenerator(mycolor);
+    TurnonLineRenderer();
+
   }
   void Switch(Signal signal)
   {
@@ -22,6 +25,7 @@ public class Modifier : Node
     mycolor=switchcolors[index];
     myrenderer.color=GameManager.Instance.SignalColorGenerator(mycolor);
   }
+
   void OnCollisionEnter2D(Collision2D other)
   {
     if(other.gameObject.GetComponent<Signal>())

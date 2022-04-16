@@ -44,23 +44,23 @@ public class Pin : Node
         }
         return valid;
     }
-    void TurnonLineRenderer()
-    {
+    // void TurnonLineRenderer()
+    // {
 
-        if(lane.nextreciever==null)
-         return;
-        lane.emitter.GetComponent<LineRenderer>().enabled=true;
+    //     if(lane.nextreciever==null)
+    //      return;
+    //     lane.emitter.GetComponent<LineRenderer>().enabled=true;
 
-        lane.emitter.GetComponent<LineRenderer>().startWidth=0.2f;
-        lane.emitter.GetComponent<LineRenderer>().endWidth=0.2f;
+    //     lane.emitter.GetComponent<LineRenderer>().startWidth=0.2f;
+    //     lane.emitter.GetComponent<LineRenderer>().endWidth=0.2f;
 
-        lane.emitter.GetComponent<LineRenderer>().SetPosition(0,lane.emitter.position);
-        lane.emitter.GetComponent<LineRenderer>().SetPosition(1,lane.nextreciever.position);
-    }
-    void TurnoffLineRenderer()
-    {
-        lane.emitter.GetComponent<LineRenderer>().enabled=false;
-    }
+    //     lane.emitter.GetComponent<LineRenderer>().SetPosition(0,lane.emitter.position);
+    //     lane.emitter.GetComponent<LineRenderer>().SetPosition(1,lane.nextreciever.position);
+    // }
+    // void TurnoffLineRenderer()
+    // {
+    //     lane.emitter.GetComponent<LineRenderer>().enabled=false;
+    // }
     void OnCollisionEnter2D(Collision2D other)
     {
         if(!other.gameObject.GetComponent<Signal>())

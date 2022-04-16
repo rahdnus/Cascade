@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     float clipLength,timer;
     void Awake()
     {
-
+        GameManager.Instance.isPaused=false;
         spawner=GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
         Debug.Log(spawner.item.clip.name);
         audioSource.clip=spawner.item.clip;
@@ -35,6 +35,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Update()
     {
+        Debug.Log(GameManager.Instance.isPaused);
         if(GameManager.Instance.isPaused)
         return;
 

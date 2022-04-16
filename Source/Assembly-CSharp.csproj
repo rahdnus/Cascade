@@ -42,10 +42,11 @@
      <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Modifier.cs" />
      <Compile Include="Assets\Scripts\Components\Pin.cs" />
-     <Compile Include="Assets\Scripts\Components\Spawner.cs" />
      <Compile Include="Assets\Scripts\Components\Node.cs" />
-     <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MIDIScripts\SongItem.cs" />
+     <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Components\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Manager\MainMenu.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -268,11 +269,11 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Melanchall.DryWetMidi">
         <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Assets\Melanchall.DryWetMidi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>D:\Programming\Projects\Unity\Projects\MiniJam\Cascade\Source\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:\Unity\2020.3.27f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

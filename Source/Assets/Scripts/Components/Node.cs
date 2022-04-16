@@ -17,4 +17,5 @@ public class Node : MonoBehaviour
 
         signal.Init(signal.Type,direction);
     }   
+
 }

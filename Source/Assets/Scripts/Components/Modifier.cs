@@ -7,13 +7,12 @@ public class Modifier : Node
   [SerializeField] Pin pin;
   [SerializeField]SignalColor[] switchcolors;
   SignalColor mycolor;
-  SpriteRenderer myrenderer;
+  [SerializeField]SpriteRenderer myrenderer;
   void Start()
   {
     // switchcolors=pin.currentlane.validateColors;
     int index=Random.Range(0,switchcolors.Length);
     mycolor=switchcolors[index];
-    myrenderer=GetComponent<SpriteRenderer>();
     myrenderer.color=GameManager.Instance.SignalColorGenerator(mycolor);
   }
   void Switch(Signal signal)

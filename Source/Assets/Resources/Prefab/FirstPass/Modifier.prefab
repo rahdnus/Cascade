@@ -49,12 +49,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86fe2dca6479ec4b92a8cfe53888174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emitter: {fileID: 4273024214009619371}
+  reciever: {fileID: 0}
   lane:
     emitter: {fileID: 0}
     nextreciever: {fileID: 0}
     validateColors: 
   pin: {fileID: 0}
   switchcolors: 
+  myrenderer: {fileID: 4858823384312865386}
 --- !u!50 &1573419968872210134
 Rigidbody2D:
   serializedVersion: 4

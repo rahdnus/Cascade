@@ -34,14 +34,10 @@ public class Pin : Node
     bool Validate(Signal signal)
     {
         bool valid = false;
-        foreach (SignalColor color in lane.validateColors)
-        {
-            if (signal.Type == color)
-            {
+
+            if (signal.Type == lane.validColor)
                 valid = true;
-                break;
-            }
-        }
+       
         return valid;
     }
     // void TurnonLineRenderer()
@@ -90,7 +86,6 @@ public class Lane
 {
     public Transform emitter;
     public Transform nextreciever;
-
-    public SignalColor[] validateColors;
+    public SignalColor validColor;
 
 }

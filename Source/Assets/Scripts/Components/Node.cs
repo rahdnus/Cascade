@@ -29,6 +29,10 @@ public class Node : MonoBehaviour
 
         lane.emitter.GetComponent<LineRenderer>().SetPosition(0,lane.emitter.position);
         lane.emitter.GetComponent<LineRenderer>().SetPosition(1,lane.nextreciever.position);
+        Color color=GameManager.Instance.SignalColorGenerator(lane.validColor);
+        lane.emitter.GetComponent<LineRenderer>().startColor=color;
+        lane.emitter.GetComponent<LineRenderer>().endColor=color;
+
     }
     protected void TurnoffLineRenderer()
     {

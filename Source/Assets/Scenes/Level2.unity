@@ -1962,6 +1962,7 @@ MonoBehaviour:
   onScreen: {fileID: 1247652265}
   score: 0
   lives: 4
+  spawner: {fileID: 2097032649}
 --- !u!4 &1107110105
 Transform:
   m_ObjectHideFlags: 0
@@ -2210,8 +2211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pins:
-  - {fileID: 1600008446}
   - {fileID: 1138484344}
+  - {fileID: 1600008446}
   - {fileID: 1828020263}
 --- !u!1 &1368316676
 GameObject:
@@ -2495,7 +2496,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3381,6 +3382,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072422549}
   m_CullTransparentMesh: 1
+--- !u!114 &2097032649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4729397522325249470, guid: c3f97a17ec927e441ae9369e32608768, type: 3}
+  m_PrefabInstance: {fileID: 2657865096170845814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7272fa803cd3da408a0f6dc7f7d8692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2111878904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,11 +3644,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5ec43a323eb1a504cb80d2ccdef78faa, type: 3}
     - target: {fileID: 1865119031037035170, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 1865119031037035170, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.088
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 2407928890037771935, guid: 20ec706b41d68c240a3a4216204368b3, type: 3}
       propertyPath: m_Enabled

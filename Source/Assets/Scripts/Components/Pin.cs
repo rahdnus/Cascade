@@ -7,6 +7,8 @@ public class Pin : Node
     public System.Action<int> onscore; 
     [SerializeField]Lane lane1,lane2;
     [SerializeField]SpriteRenderer left,right;
+
+    public SpriteRenderer active;
     public bool terminal=false;
      void Awake()
      {

@@ -8,6 +8,8 @@ public class Controller : MonoBehaviour
     void Start()
     {
         currentPin=pins[0];
+        currentPin.active.color=Color.white;
+
     }
     void Update()
     {
@@ -16,10 +18,13 @@ public class Controller : MonoBehaviour
         
         if(!Input.anyKey)
             return;
+            
+        currentPin.active.color=Color.gray;
         
         if(Input.GetKeyDown(KeyCode.A))
         {
             currentPin=pins[0];
+
         }
         else 
         if(Input.GetKeyDown(KeyCode.S))
@@ -31,6 +36,8 @@ public class Controller : MonoBehaviour
         {
             currentPin=pins[2];
         }
+            
+        currentPin.active.color=Color.white;
         
         float horizontal=0;
 

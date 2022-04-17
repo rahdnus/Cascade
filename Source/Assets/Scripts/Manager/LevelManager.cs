@@ -19,14 +19,14 @@ public class LevelManager : MonoBehaviour
     {
         GameManager.Instance.isPaused=false;
         // spawner=GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;   
-        if(spawner==null)
-        {
-            
-        }     
-        audioSource.clip=spawner.item.clip;
+        if(spawner!=null)
+        {    
+            audioSource.clip=spawner.item.clip;
         clipLength=audioSource.clip.length;
         audioSource.Play();
         
+        }     
+    
         pins=Resources.FindObjectsOfTypeAll(typeof(Pin)) as Pin[];
         foreach(Pin pin in pins)
         {

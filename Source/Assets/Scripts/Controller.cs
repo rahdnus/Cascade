@@ -21,18 +21,17 @@ public class Controller : MonoBehaviour
             
         currentPin.active.color=Color.gray;
         
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.A) &&  pins[0]!=null)
         {
             currentPin=pins[0];
-
         }
         else 
-        if(Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S) && pins[1]!=null)
         {
             currentPin=pins[1];
         }
         else 
-        if(Input.GetKeyDown(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.D) &&  pins[2]!=null)
         {
             currentPin=pins[2];
         }

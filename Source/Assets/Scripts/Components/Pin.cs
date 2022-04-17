@@ -81,8 +81,9 @@ public class Pin : Node
             onscore(50);
             return;
         }
-        Destroy(other.gameObject);
+
         onhit();
+        Destroy(other.gameObject);
         Debug.Log("invalid");
     }
 

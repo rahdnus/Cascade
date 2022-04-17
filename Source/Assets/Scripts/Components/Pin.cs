@@ -6,11 +6,15 @@ public class Pin : Node
     public System.Action onhit;
     public System.Action<int> onscore; 
     [SerializeField]Lane lane1,lane2;
+    [SerializeField]SpriteRenderer left,right;
     public bool terminal=false;
      void Awake()
      {
          lane=lane1;
-
+        
+         left.color=GameManager.Instance.SignalColorGenerator(lane1.validColor);
+         right.color=GameManager.Instance.SignalColorGenerator(lane2.validColor);
+         
          TurnonLineRenderer();
      }
     public void Rotate(float direction)

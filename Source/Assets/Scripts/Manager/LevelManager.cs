@@ -13,16 +13,20 @@ public class LevelManager : MonoBehaviour
     public int score=0;
     public int lives=4;
     Pin[] pins;
-    Spawner spawner;
+    [SerializeField]Spawner spawner;
     float clipLength,timer;
     void Awake()
     {
         GameManager.Instance.isPaused=false;
-        spawner=GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
-        Debug.Log(spawner.item.clip.name);
+        // spawner=GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;   
+        if(spawner==null)
+        {
+            
+        }     
         audioSource.clip=spawner.item.clip;
         clipLength=audioSource.clip.length;
         audioSource.Play();
+        
         pins=Resources.FindObjectsOfTypeAll(typeof(Pin)) as Pin[];
         foreach(Pin pin in pins)
         {

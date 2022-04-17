@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]AudioSource audioSource;
     [Space(10)]  
     [SerializeField]AudioClip hurt;      
-    [SerializeField]Text ScoreUI,totalScoreDeath,totalScoreSuccess;
+    [SerializeField]Text ScoreUI,totalScoreDeath,totalScoreSuccess,LivesUI;
     public int nextSceneBuildIndex;
     [SerializeField]GameObject DeathScreen,PauseScreen,SuccessScreen,onScreen,RedScreen;
     public int score=0;
@@ -74,6 +74,7 @@ public class LevelManager : MonoBehaviour
         }
 
         lives-=1;
+        LivesUI.text=lives.ToString();
         RedScreen.GetComponent<Animator>().Play("Error");
         AudioSource.PlayClipAtPoint(hurt,spawner.gameObject.transform.position);
         if(lives==0)
